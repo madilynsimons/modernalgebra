@@ -24,7 +24,7 @@
 
 \item TODO 4
 
-\item TODO 5
+\item Either $(a,b) = 1$ or $(a, b) \neq 1$.  First, suppose $(a, b) = 1$.  Since $a$ and $b$ do not have any common prime factors, $c$ must be a factor of $ab$ in order to be divisible by both $a$ and $b$.  Next suppose $(a, b) \neq 1$.  Let $a = {p_1}^{x_1} * ... * {p_k}^{x_k}$ and $b = {p_1}^{y_1} * ... * {p_k}^{y_k}$ be the prime factorizations of $a$ and $b$ respectively such that $x_i \geq 0$ and $y_i \geq 0$ for all $i \leq k$.  If $a$ and $b$ both divide $c$, then $m = {p_1}^{max(x_1, y_1)} * ... * {p_k}^{max(x_k, y_k)}$ is a divisor of $c$.  If $(a,b) = ${p_1}^{min(x_1, y_1)} * ... * {p_k}^{min(x_k, y_k)}$, then  $m * (a,b) = ab$.  Let $c = m*x$ for some integer $x$.  Thus, $c = m*x*(a,b) = a*b*x$ is divisible by $ab$.
 
 \item First, assume $n$ is a square number.  If $n = {p_1}^{a_1} * ... * {p_k}^{a_k}$, then $\sqrt n = {p_1}^{a_1/2} * ... * {p_k}^{a_k/2}$.  By the definition of prime factorization, $a_i$ and $a_i/2$ must be integers for all $i$ such that $1 \leq i \leq k$.  Thus, $a_i/2$ can only be an integer is 2 evenly divides $a_i$.  Therefore, each $a_i$ must be even.  Next, assume each $a_i$ is even.  Let $a_i = 2b_i$ for some integers $b_i$.  Thus, $n = {p_1}^{2b_1} * ... * {p_k}^{2b_k}$.  Since each $b_i$ is an integer, $\sqrt n = {p_1}^{b_1} * ... * {p_k}^{b_k}$ is an integer and $n$ must be a square number.
 
