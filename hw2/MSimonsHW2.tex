@@ -35,7 +35,7 @@ Consequently,
 
 \item Let $a$ be some element of $\mathbb{Z}/m\mathbb{Z}$.  Assume $a$ is a unit
 and let $a^{-1}$ be its inverse.  Also assume $a$ is a zero divisor and let
-$ab \equiv 0$ (mod $m$) for some non-zero element $b$ of $\mathbb{Z}/m\mathbb{Z}$
+$ab \equiv 0$ (mod $m$) for some nonzero element $b$ of $\mathbb{Z}/m\mathbb{Z}$
 (by definition of zero divisor).
 As such,
 \[
@@ -47,6 +47,24 @@ a^{-1}ab \equiv a^{-1}(ab) \equiv a^{-1}(0) \equiv 0 (\textrm{mod}\ m)
 \]
 Thus, $b \equiv 0$ (mod $m$).  This is a contradiction.  Therefore, $a$ cannot
 be a zero divisor and a unit.
+
+\item Let $a$ be some nonzero element of $\mathbb{Z}/m\mathbb{Z}$.  Either $(a,m) = 1$
+or $(a,m) > 1$.  First, let $(a,m) = 1$.  If $(a,m) = 1$, then $a$ is a unit
+and we are done.  Next, let $(a, m) = c$ for some $c$ such that $c > 1$.
+Let $a = {p_0}^{a_0}{p_1}^{a_1} ... {p_k}^{a_k}$ be the prime factorization of
+$a$ such that $a_i \geq 0$ for all $i$.
+Similarly, let $m = {p_0}^{m_0}{p_1}^{m_1} ... {p_k}^{m_k}$ be the prime factorization of
+$m$ such that $m_i \geq 0$ for all $i$.
+Since $a$ and $m$ are not relatively prime and $a$ is a nonzero element, there exists
+some $d = {p_0}^{max(a_0, m_0)} ... {p_k}^{max(a_k, m_k)}$, which is divisible by $a$
+and is a zero element of $\mathbb{Z}/m\mathbb{Z}$.
+Let $x = {p_0}^{x_0} ... {p_k}^{x_k}$ such that $x_i \cdot a_i = max(a_i, m_i)$
+for all $i$.  Thus, $ax \equiv d \equiv 0$ (mod m).  We know that $x$ is a nonzero
+element because $x$ could only be a nonzero element if $x_i = 0$ for all $i$,
+implying that $max(a_i, m_i) = 0$ for all $i$ (which would only be true if $a = 1$ and
+$p = 1$).  Therefore, if $(a, m) \neq 1$, then $a$ is a zero divisor.
+
+
 
 \end{enumerate}
 \end{document}
