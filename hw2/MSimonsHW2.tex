@@ -1,0 +1,37 @@
+\documentclass{article}
+\title{Homework 2}
+\author{Madilyn Simons}
+\date{}
+\setlength{\parindent}{0pt}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+
+\item By definition, $\binom{p}{k} = \frac{p!}{k!(p-k)!} = p\frac{(p-1)!}{k!(p-k)!}$.
+Since $k < p$ and $p-k < p$, neither $k!$ nor $(p-k)!$ have any prime factors that divide $p$,
+and $\frac{p!}{k!(p-k)!}$ is an integer, $\frac{(p-1)!}{k!(p-k)!}$ must also be an integer.
+This implies that $p \vert \binom{p}{k}$.
+
+\item By definition of binomial coefficients,
+\[
+(a+b)^p = \sum_{k=0}^{p} \binom{p}{k} a^{p-k}b^k = (a^p + b^p) +
+\sum_{k=1}^{p-1} (\binom{p}{k} a^{p-k}b^k).
+\]
+Since $p \vert \binom{p}{k}$ for all $k < p$ and all numbers between 1 and $p$-1
+(inclusive) as less than $p$, $\sum_{k=0}^{p} \binom{p}{k} a^{p-k}b^k$ is divisible
+by $p$.  This means that $\sum_{k=0}^{p} \binom{p}{k} a^{p-k}b^k \equiv 0$ (mod p).
+Consequently,
+\[
+(a^p + b^p) + \sum_{k=1}^{p-1} (\binom{p}{k} a^{p-k}b^k) \equiv (a^p + b^p) + 0
+\equiv a^p + b ^p (\textrm{mod}\ p).
+\]
+
+\end{enumerate}
+\end{document}
