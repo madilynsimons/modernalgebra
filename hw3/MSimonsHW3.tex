@@ -14,9 +14,70 @@
 
 \begin{enumerate}
 
-\item TODO
+\item The set $\frac{1}{2}\mathbb{Z}$ is not a ring.  A ring must be closed under
+multiplication.  Let $a = \frac{m}{2}$ and $b = \frac{n}{2}$ for some integers
+$m$, $n$.  We know that $ab = \frac{mn}/4$.  Assume $m$ and $n$ are both odd and
+that $m = 2x + 1$ and $n = 2y + 1$ for some integers $x$, $y$.  Therefore,
+\[
+ab = \frac{mn}{4} = \frac{(2x+1)(2y+1)}{4} = \frac{2(2xy+y)+1}{4}
+\]
+Since $ab$ is not an element of the set, this means that the set is not closed
+under multiplication.
 
-\item TODO
+\item This set is a ring. \\
+Let $a = \frac{m}{2x+1}$, $b=\frac{n}{2y+1}$, $c=\frac{l}{2z+1}$ be elements of
+the set for some integers $m$, $n$, $l$, $x$, $y$, and $z$.\\
+The set is closed under addition:
+\[
+a + b = \frac{m}{2x+1} + frac{n}{2y+1} = \frac{m(2y+1) + 2(nx+1)}{2(2xy+x+y)+1}
+\]
+Associative addition holds:
+\[
+a+(b+c) = \frac{m}{2x+1} + (\frac{n}{2y+1} + \frac{l}{2z+1})
+\]
+\[
+= \frac{m(2y+1)(2z+1) + n(2z+1)(2x+1) + l(2y+1)(2x+1)}{(2x+1)(2y+1)(2z+1)}
+\]
+\[
+= (\frac{m}{2x+1} + \frac{n}{2y+1}) + \frac{l}{2z+1} = (a+b)+c
+\]
+Commutative addition holds:
+\[
+a + b = \frac{m}{2x+1} + \frac{n}{2y+1}
+\]
+\[
+= \frac{m(2y+1) + 2(nx+1)}{2(2xy+x+y)+1}
+\]
+\[
+= \frac{n}{2y+1} + \frac{m}{2x+1} = b + a
+\]
+There exists an $0$ element in the set such that:
+\[
+a + 0 = \frac{m}{2x+1} + \frac{0}{1} = \frac{m}{2x+1} = a
+= \frac{0}{1} + \frac{m}{2x+1} = 0 + a
+\]
+There is a solution to $a + x = 0$.  Let $x = \frac{-m}{2x+1}$:
+\[
+a + x = \frac{m}{2x+1} + \frac{-m}{2x+1} = \frac{m + {-m}}{2x+1} = \frac{0}{2x+1} = 0
+\]
+The set is closed under multiplication:
+\[
+ab = \frac{m}{2x+1}\cdot\frac{n}{2y+1} = \frac{mn}{(2x+1)(2y+1)} = \frac{mn}{2(2xy+x+y)+1}
+\]
+Associative multiplication holds:
+\[
+a(bc) = \frac{m}{2x+1}\cdot(\frac{n}{2y+1}\cdot\frac{l}{2z+1}) = (\frac{m}{2x+1}\cdot\frac{n}{2y+1})\cdot\frac{l}{2z+1}
+= (ab)c
+\]
+The Distributive Property holds:
+\[
+a(b+c) = \frac{m}{2x+1}\cdot(\frac{n}{2y+1}+\frac{l}{2z+1})
+= \frac{m}{2x+1}\cdot(\frac{n(2z+1) + l(2y+1)}{(2y+1)(2z+1)})
+\]
+\[
+= \frac{m}{2x+1}\cdot\frac{n}{2y+1} + \frac{m}{2x+1}\cdot\frac{l}{2z+1}
+=ab+ac
+\]
 
 \item TODO
 
