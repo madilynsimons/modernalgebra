@@ -14,19 +14,21 @@
 
 \begin{enumerate}
 
-\item Since $k < p$ and $(p-k) < p$, neither $k!$ nor $(p-k)!$ have any prime factors that divide $p$.
+\item Since $k < p$ and $(p-k) < p$, neither $k!$ nor $(p-k)!$ have any prime
+factors that divide $p$, implying $gcd(p, k!(p-k)!) = 1$.
 Because of this and the fact that $\frac{p!}{k!(p-k)!}$ is an integer,
 $\frac{(p-1)!}{k!(p-k)!}$ must also be an integer.
 By definition, $\binom{p}{k} = \frac{p!}{k!(p-k)!} = p\frac{(p-1)!}{k!(p-k)!}$.
-Because $p$ and $\frac{(p-1)!}{k!(p-k)!}$ are both integers, this implies that $p \vert \binom{p}{k}$.
+Because $p$ and $\frac{(p-1)!}{k!(p-k)!}$ are both integers, this implies that
+$p \vert \binom{p}{k}$.
 
 \item By definition of binomial coefficients,
 \[
 (a+b)^p = \sum_{k=0}^{p} \binom{p}{k} a^{p-k}b^k = (a^p + b^p) +
 \sum_{k=1}^{p-1} (\binom{p}{k} a^{p-k}b^k).
 \]
-Since $p \vert \binom{p}{k}$ for all $k < p$ and all numbers between 1 and $p-1$
-(inclusive) are less than $p$, $\sum_{k=1}^{p-1} \binom{p}{k} a^{p-k}b^k$ is divisible
+Since $p \vert \binom{p}{k}$ for all $k < p$,
+$\sum_{k=1}^{p-1} \binom{p}{k} a^{p-k}b^k$ is divisible
 by $p$.  This means that $\sum_{k=1}^{p-1} \binom{p}{k} a^{p-k}b^k \equiv 0$ (mod $p$).
 Consequently,
 \[
@@ -35,7 +37,7 @@ Consequently,
 \]
 
 \item Let $a$ be some element of $\mathbb{Z}/m\mathbb{Z}$.  Assume $a$ is a unit
-and let $a^{-1}$ be its inverse.  Also assume $a$ is a zero divisor and let
+and let $a^{-1}$ be its inverse.  Also assume $a$ is a zero divisor, so
 $ab \equiv 0$ (mod $m$) for some nonzero element $b$ of $\mathbb{Z}/m\mathbb{Z}$.
 As such,
 \[
@@ -57,10 +59,10 @@ Similarly, let $m = {p_0}^{m_0}{p_1}^{m_1} ... {p_k}^{m_k}$ be the prime factori
 $m$ such that $m_i \geq 0$ for all $i$.
 Since $a$ and $m$ are not relatively prime and $a$ is a nonzero element, there exists
 some $d = {p_0}^{max(a_0, m_0)} ... {p_k}^{max(a_k, m_k)}$, which is divisible by $a$
-and is a zero element of $\mathbb{Z}/m\mathbb{Z}$.
-Let $x = {p_0}^{x_0} ... {p_k}^{x_k}$ such that ${x_i}{a_i} = max(a_i, m_i)$
+and is a zero element of $\mathbb{Z}/m\mathbb{Z}$ because it is a multiple of $m$.
+Let $x = {p_0}^{x_0} ... {p_k}^{x_k}$ such that ${x_i}+{a_i} = max(a_i, m_i)$
 for all $i$.  That is, $ax \equiv d \equiv 0$ (mod m).
-Therefore, if $(a, m) \neq 1$, then $a$ is a zero divisor.
+Therefore, if $(a, m) \neq 1$, then $a$ is a zero divisor because $x \not\equiv 0$ (mod $m$).
 
 \item Let $ua = 1$ and $ub = 1$ for elements $a, b$ in $\mathbb{Z}/m\mathbb{Z}$.
 As such,
