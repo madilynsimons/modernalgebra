@@ -49,7 +49,7 @@ Next, we prove that $\cong$ is transitive.  If $f$ and $g$ are isomorphisms,
 then there exists $r \in R$, $s \in S$, and $t \ in T$ such that
 $f(r) = s$ and $g(s) = t$.  As such, let $h: R \rightarrow T$ be the function
 such that $h(r) = g(f(r)) = g(s) = t$. \\ \\
-Let $g(s') = t'$ for some $s' \in S$ and $t' in T$ such that
+Let $g(s') = t'$ for some $s' \in S$ and $t' \in T$ such that
 $s \neq s'$ and $t \neq t'$.
 We know $h$ is injective because $h(r) = g(f(r)) = g(s) = t$ and
 $h(r') = g(f(r')) = g(s') = t'$ and $t \neq t'$.
@@ -68,7 +68,16 @@ h(r)h(r') = g(f(r))g(f(r')) = g(f(r)f(r')) = g(f(rr')) = h(rr')
 \]
 Therefore $h$ is an isomorphism and $\cong$ is transitive.
 
-\item TODO
+\item Assume $\mathbb{C}$ and $\mathbb{R}$ are isomorphic and
+$f: \mathbb{C} \rightarrow \mathbb{R}$.  By the definition of isomorphism,
+we know that $f(1) = f(1\cdot1) = f(1)f(1) = f(1)^2$.  If $f(1) = f(1)^2$, then
+$f(1)$ must either be 0 or 1.  Assume $f(1) = 0$.  Then, for an $c \in \mathbb{C}$,
+$f(c) = f(c\cdot1) = f(c)f(1) = f(c)\cdot0 = 0$, and this is a contradiction since
+isomorphisms are bijective.  Therefore, $f(1) = 1$.  Again, by the definition
+of isomorphism, $f(-1) = -f(1) = -1$.  Now let $r = f(i)$.  As such,
+$r^2 = f(i)f(i) = f(i^1) = f(-1) = -1$.  However, this is a contradiction
+because there is no $r \in \mathbb{R}$ such $r^2 = -1$.  Therefore
+$\mathbb{C}$ and $\mathbb{R}$ are not isomorphic.
 
 \item TODO
 
