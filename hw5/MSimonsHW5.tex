@@ -64,7 +64,37 @@ $f(\alpha) + g(\alpha) = 0_R$.
 \\
 Thus, $S[\alpha]$ is a subring of $R$.
 
-\item TODO
+\item Let $(a_0 + a_{1}x + ... + a_{n}x^n)$, $(b_0 + b_{1}x + ... + b_{n}x^n)$
+be elements of $R_{1}[x]$.
+\\
+\\
+We can prove $G$ is closed under addition as such:
+\[
+G((a_0 + a_{1}x + ... + a_{n}x^{n}) + (b_0 + b_{1}x + ... + b_{n}x^{n}))
+\] \[
+= G(a_0 + a_{1}x + ... + a_{n}x^n + b_0 + b_{1}x + ... + b_{n}x^{n})
+\] \[
+= F(a_{0}) + F(a_{1})x + ... + F(a_{n})x^{n} + F(b_{0}) + F(b_{1})x + ... + F(b_{n})x^{n}
+\] \[
+= (F(a_{0}) + F(a_{1})x + ... + F(a_{n})x^{n}) + (F(b_{0}) + F(b_{1})x + ... + F(b_{n})x^{n})
+\] \[
+= G(a_0 + a_{1}x + ... + a_{n}x^{n}) + G(b_0 + b_{1}x + ... + b_{n}x^{n})
+\]
+We can prove $G$ is closed under multiplication as such:
+\[
+G((a_0 + a_{1}x + ... + a_{n}x^{n}) (b_0 + b_{1}x + ... + b_{n}x^{n}))
+\] \[
+= G (a_{0}b_{0} + ... + a_{n}b_{m}x^{n+m})
+\] \[
+= F(a_{0}b_{0}) + ... + F(a_{n}b_{m})x^{n+m}
+\] \[
+= F(a_{0})F(b_{0}) + ... + F(a_{n})F(b_{m})x^{n+m}
+\] \[
+= (F(a_{0}) + F(a_{1})x + ... + F(a_{n})x^{n})(F(b_{0}) + F(b_{1})x + ... + F(b_{m})x^{m})
+\] \[
+= G(a_0 + a_{1}x + ... + a_{n}x^{n}) G(b_0 + b_{1}x + ... + b_{n}x^{n})
+\]
+Therefore $G$ is also a a ring homomorphism.
 
 \end{enumerate}
 \end{document}
