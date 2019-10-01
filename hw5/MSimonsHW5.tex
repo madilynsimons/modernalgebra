@@ -1,0 +1,43 @@
+\documentclass{article}
+\title{Homework 5}
+\author{Madilyn Simons}
+\date{}
+\setlength{\parindent}{0pt}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+
+\item To prove $\varphi_{\alpha}$ is closed under addition, first let $f$, $g$
+be any elements of $S[x]$.  We know that $f+g$ is also an element of
+$S[x]$ because the coefficients of $f$ and $g$ are elements of $S$, which is a
+ring.  This implies that the coefficients of $f$ and $g$ are closed under
+addition, so the coefficients of $f+g$ are also in $S$.
+\\ \\
+With this having be said, we can prove $\varphi_{\alpha}$ is closed under addition
+as such:
+\[
+\varphi_{\alpha}(f+g) = (f+g)(\alpha) = f(\alpha) + g(\alpha)
+= \varphi_{\alpha}(f) + \varphi_{\alpha}(g)
+\]
+We know $f \cdot g$ is an element of $S[x]$ since $S$ is closed under multiplication,
+so the coefficients of $f \cdot g$ are elements of $S$.
+\\ \\
+We can prove $\varphi_{\alpha}$ is closed under multiplication as such:
+\[
+\varphi_{\alpha}(f \cdot g) = (f \cdot g)(\alpha) = f(\alpha) \cdot g(\alpha)
+= \varphi_{\alpha}(f) \cdot \varphi_{\alpha}(g)
+\]
+Thus, $\varphi_{\alpha}$ is a ring homomorphism.
+
+\item TODO
+\item TODO
+
+\end{enumerate}
+\end{document}
