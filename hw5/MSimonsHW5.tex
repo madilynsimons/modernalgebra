@@ -36,7 +36,34 @@ We can prove $\varphi_{\alpha}$ is closed under multiplication as such:
 \]
 Thus, $\varphi_{\alpha}$ is a ring homomorphism.
 
-\item TODO
+\item Let $f(\alpha)$, $g(\alpha)$ be any elements in $S[\alpha]$.  By the
+definition of $S[\alpha]$, $f(x)$, $g(x)$ as elements of $S[x]$.  Since $S[x]$
+is a ring homomorphism, $(f+g)(x)$ is an element of $S[x]$.  If $(f+g)(x)$ is an
+element of $S[x]$, then $(f+g)(\alpha)$ is an element of $S[\alpha]$ and
+$S[\alpha]$ is closed under addition.
+\\
+\\
+Similarly, $f(x)g(x)$ is an element of $S[x]$.  This implies that
+$f(\alpha)g(\alpha)$ is an element of $S[\alpha]$ and so $S[\alpha]$ is
+closed under multiplication.
+\\
+\\
+For $S[\alpha]$ to be a subring of $R$, $0_R$ must be an element of $S[\alpha]$.
+Define the function $f:S[x] \rightarrow R$ by $f(x) = 0_R$.  As such,
+$f(\alpha) = 0_R$ is an element of $S[\alpha]$.
+\\
+\\
+Let $f(x) = a_0 + a_{1}x + ... + a_{n}x^n$ be any element of $S[x]$.
+By definition, $a_i$ is an element of $R$ for all non-negative integers $i$, and
+for all $a_i$, there exists a $b_i$ in $R$ such that $a_i + b_i = 0_R$.
+Therefore, there exists a function $g(x) = b_0 + b_{1}x + ... + b_{n}x^n$ in
+$S[x]$ such that $f(x) + g(x) = 0_R$.  As a direct result, for any $f(\alpha)$
+in $S[\alpha]$ there exists a $g(\alpha)$ such that
+$f(\alpha) + g(\alpha) = 0_R$.
+\\
+\\
+Thus, $S[\alpha]$ is a subring of $R$.
+
 \item TODO
 
 \end{enumerate}
