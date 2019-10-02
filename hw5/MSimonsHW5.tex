@@ -22,7 +22,7 @@ f(x) - g(x) = d(x)
 \] \[
 f(x)g(x) = p(x)
 \]
-then
+then, for any $\alpha$ in $R$,
 \[
 \] \[
 f(\alpha) + g(\alpha) = s(\alpha)
@@ -43,33 +43,24 @@ We can prove that $\phi_{\alpha}$ is closed under multiplication as such:
 \]
 Thus, $\phi_{\alpha}$ is a ring homomorphism.
 
-\item Let $f(\alpha)$, $g(\alpha)$ be any elements in $S[\alpha]$.  By the
-definition of $S[\alpha]$, $f(x)$, $g(x)$ as elements of $S[x]$.  Since $S[x]$
-is a ring homomorphism, $(f+g)(x)$ is an element of $S[x]$.  If $(f+g)(x)$ is an
-element of $S[x]$, then $(f+g)(\alpha)$ is an element of $S[\alpha]$ and
-$S[\alpha]$ is closed under addition.
+\item Let $f(\alpha)$, $g(\alpha)$ be elements in $S[\alpha]$.  This implies
+that $f(x)$ and $g(x)$ are elements of $S[x]$.  Since $S$ is a ring, its
+elements are closed under addition, implying that $S[x]$ is closed under
+addition as well.  Let $f(x) + g(x) = s(x)$ and $f(x) - g(x) = d(x)$.  Since
+$s(x)$ and $d(x)$ are in $S[x]$, $s(\alpha) = f(\alpha) + g(\alpha)$ and
+$d(\alpha) = f(\alpha) - g(\alpha)$ are elements of $S[\alpha]$ and $S[\alpha]$
+is closed under addition.
 \\
 \\
-Similarly, $f(x)g(x)$ is an element of $S[x]$.  This implies that
-$f(\alpha)g(\alpha)$ is an element of $S[\alpha]$ and so $S[\alpha]$ is
-closed under multiplication.
-\\
-\\
-For $S[\alpha]$ to be a subring of $R$, $0_R$ must be an element of $S[\alpha]$.
-Define the function $f:S[x] \rightarrow R$ by $f(x) = 0_R$.  As such,
-$f(\alpha) = 0_R$ is an element of $S[\alpha]$.
-\\
-\\
-Let $f(x) = a_0 + a_{1}x + ... + a_{n}x^n$ be any element of $S[x]$.
-By definition, $a_i$ is an element of $R$ for all non-negative integers $i$, and
-for all $a_i$, there exists a $b_i$ in $R$ such that $a_i + b_i = 0_R$.
-Therefore, there exists a function $g(x) = b_0 + b_{1}x + ... + b_{n}x^n$ in
-$S[x]$ such that $f(x) + g(x) = 0_R$.  As a direct result, for any $f(\alpha)$
-in $S[\alpha]$ there exists a $g(\alpha)$ such that
-$f(\alpha) + g(\alpha) = 0_R$.
+Similarly, since $S$ is closed under multiplication, we can assume $p(x) = f(x)g(x)$
+is an element of $S[x]$.  Therefore $p(\alpha) = f(\alpha)g(\alpha)$ is an
+element of $S[\alpha]$ and $S[alpha]$ is closed under multiplication.
 \\
 \\
 Thus, $S[\alpha]$ is a subring of $R$.
+
+
+
 
 \item Let $(a_0 + a_{1}x + ... + a_{n}x^n)$, $(b_0 + b_{1}x + ... + b_{n}x^n)$
 be elements of $R_{1}[x]$.
