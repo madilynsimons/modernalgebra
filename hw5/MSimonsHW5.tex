@@ -14,27 +14,34 @@
 
 \begin{enumerate}
 
-\item To prove $\varphi_{\alpha}$ is closed under addition, first let $f$, $g$
-be any elements of $S[x]$.  We know that $f+g$ is also an element of
-$S[x]$ because the coefficients of $f$ and $g$ are elements of $S$, which is a
-ring.  This implies that the coefficients of $f$ and $g$ are closed under
-addition, so the coefficients of $f+g$ are also in $S$.
-\\ \\
-With this having be said, we can prove $\varphi_{\alpha}$ is closed under addition
-as such:
+\item Assume that if $f(x)$, $g(x)$, $s(x)$, $d(x)$, $p(x)$ in $S[x]$ satisfy
 \[
-\varphi_{\alpha}(f+g) = (f+g)(\alpha) = f(\alpha) + g(\alpha)
-= \varphi_{\alpha}(f) + \varphi_{\alpha}(g)
+f(x) + g(x) = s(x)
+\] \[
+f(x) - g(x) = d(x)
+\] \[
+f(x)g(x) = p(x)
 \]
-We know $f \cdot g$ is an element of $S[x]$ since $S$ is closed under multiplication,
-so the coefficients of $f \cdot g$ are elements of $S$.
-\\ \\
-We can prove $\varphi_{\alpha}$ is closed under multiplication as such:
+then
 \[
-\varphi_{\alpha}(f \cdot g) = (f \cdot g)(\alpha) = f(\alpha) \cdot g(\alpha)
-= \varphi_{\alpha}(f) \cdot \varphi_{\alpha}(g)
+\] \[
+f(\alpha) + g(\alpha) = s(\alpha)
+\] \[
+f(\alpha) - g(\alpha) = d(\alpha)
+\] \[
+f(\alpha)g(\alpha) = p(\alpha)
 \]
-Thus, $\varphi_{\alpha}$ is a ring homomorphism.
+We can prove that $\phi_{\alpha}$ is closed under addition as such:
+\[
+\phi_{\alpha}(f) + \phi_{\alpha}(g) = f(\alpha) + g(\alpha) = s(\alpha) = \phi_{\alpha}(s)
+\] \[
+\phi_{\alpha}(f) - \phi_{\alpha}(g) = f(\alpha) - g(\alpha) = d(\alpha) = \phi_{\alpha}(d)
+\]
+We can prove that $\phi_{\alpha}$ is closed under multiplication as such:
+\[
+\phi_{\alpha}(f)\phi_{\alpha}(g) = f(\alpha)g(\alpha) = p(\alpha) = \phi_{\alpha}(p)
+\]
+Thus, $\phi_{\alpha}$ is a ring homomorphism.
 
 \item Let $f(\alpha)$, $g(\alpha)$ be any elements in $S[\alpha]$.  By the
 definition of $S[\alpha]$, $f(x)$, $g(x)$ as elements of $S[x]$.  Since $S[x]$
