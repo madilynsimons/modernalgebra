@@ -85,7 +85,34 @@ $m$, $n$, $x$, and $y$.  As such,
 \frac{m}{6x+3}\cdot\frac{n}{6y+4} = \frac{mn}{6(6xy+4x+3y+2)}
 \]
 
-\item
+\item Assume $a$, $b$ are elements in $R_1 \cap R_2$.  This implies $a$, $b$ are
+in $R_1$.  Since $R_1$ is a subring, $a+b$ is in $R_1$.  Similarly, $a$, $b$ are
+in $R_2$ and $a+b$ is in $R_2$ as $R_2$ is also a subring.  Since $a+b$ is in
+$R_1$ and $R_2$, $a+b$ is in $R_1 \cap R_2$ and $R_1 \cap R_2$ is closed
+under addition.
+\\
+\\
+Since $R_1$ and $R_2$ are subrings, $ab$ is in $R_1$ and $ab$ is in $R_2$.
+Therefore $ab$ is in $R_1 \cap R_2$ and $R_1 \cap R_2$ is closed under
+multiplication.
+\\
+\\
+Thus, $R_1 \cap R_2$ is a subring of $R$ (and therefore a ring).
+\\
+\\
+$R_1 \cup R_2$ is not necessarily a ring.  Let $R_1$ and $R_2$ be
+ subrings of $R$ such that $R_2$ is not a subring of $R_1$.  Let $a$ be an
+ element of $R_1$, but not of $R_2$.  Let $b$ be any element of $R_2$.
+ \\
+ \\
+ If $R_1 \cup R_2$ is a ring, $a+b$ is in $R_1 \cup R_2$.  By definition of
+ union, $a+b$ is in $R_1$ or $a+b$ is in $R_2$.  If $a+b$ is in $R_1$, then
+ $(a+b)-a$ is also in $R_1$ (since $R_1$ is closed under addition).  However,
+ this implies $b$ is in $R_1$.  If any element in $R_2$ is an element of $R_1$,
+ then $R_2$ is a subring of $R_1$, which is a contradiction.  If $a+b$ is in
+ $R_2$, then $(a+b)-b$ is also in $R_2$.  This implies that $a$ is in $R_2$,
+ which is another contradiction.  Therefore, if two subrings exist such that
+ neither is a subset of the other, their union is not a ring.
 
 \item Assume $M$ is a unit.  Therefore there exists some $M^{-1} \in M_2(\mathbb{Z})$
 such that $MM^{-1} = I_2$.  We find $M^{-1}$ using Gaussian Elimination:
