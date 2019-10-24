@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{amsmath,amssymb}
+\newcommand{\Z}{\mathbb{Z}}
 \title{Homework 6}
 \author{Madilyn Simons}
 \date{}
@@ -20,7 +22,7 @@ must show that it is reflexive, symmetric, and transitive.
 \\
 First, since $R$ is a commutative ring, there exists some identity element in
 $R$, $1_R$, such that $a1_R = a$.  We can say that $1_R$ is a unit since
-$1_{R} \dot 1_{R} = 1_{R}$.  Since $a1_R = a$, $a$ is an associate of $a$
+$(1_{R})  (1_{R}) = 1_{R}$.  Since $a1_R = a$, $a$ is an associate of $a$
 and "is an associate of" is reflexive.
 \\
 \\
@@ -62,6 +64,37 @@ $v^{-1}$, $u^{-1} \in R$ such that $vv^{-1} = 1_R$ and $uu^{-1} = 1_R$ since
 $v$ and $u$ are units.  Thus, $(vu)(v^{-1}u^{-1}) = (vv^{-1})(uu^{-1}) = 1_R$
 and so $vu$ is a unit.  Since $vu$ is a unit, $a$ is an associate of $c$ and
 "is an associate of" is transitive.
+
+\item
+\begin{enumerate}
+\item There are 4 different quadratic polynomial in $(\Z/2\Z)[x]$:
+\[
+x^2
+\] \[
+x^2 + 1
+\] \[
+x^2 + x
+\] \[
+x^2 + x + 1
+\]
+Let $f(x)$ be any quadratic polynomial in $(\Z/2\Z)[x]$.  We know that
+If $f(x) = x^2$, then $f(x)$ is reducible because $0$ is a root.
+If $f(x) = x^2 + 1$, then $f(x)$ is reducible because $1$ is a root.
+If $f(x) = x^2 + x$, then $f(x)$ is reducible because $1$ is a root.
+\\ \\
+If $f(x) = x^2 + x + 1$, then $f(x)$ is irreducible because $f(x)$ has no roots
+in $(\Z/2\Z)[x]$:
+\[
+f(0) = 0^2 + 0 + 1 = 1
+\] \[
+f(1) = 1^1 + 1 + 1 = 3 = 1
+\]
+\\
+Therefore the only irreducible quadratic polynomial in $(\Z/2\Z)[x]$ is
+$x^2 + x + 1$.
+
+\item TODO
+\end{enumerate}
 
 \end{enumerate}
 \end{document}
