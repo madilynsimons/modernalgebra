@@ -21,10 +21,53 @@
 \item Let $f(x) = x^5 - 4x^4 + 4d^3 + 3x^2 -26x + 21$.
 If $p = 2$, then $\overline{f}(x) = x^5 + x^2 + 1$ in $\mathbb{Z}_{p}[x]$.
 Since $\overline{f}(0) = \overline{f}(1) = 1$, $\overline{f}(x)$ is
-irreducible in $\mathbb{Z}_{p}[x]$.  Therefore, by Theorem 4.25, $f(x)$ is
+irreducible in $\mathbb{Z}_{p}[x]$.  Therefore, $f(x)$ is
 irreducible in $\mathbb{Q}[x]$.
 
-\item TODO
+\item
+\begin{enumerate}
+\item
+Since $-1 + 3i$ is a root of $f(x)$, $-1 - 3i$ is a root of $f(x)$.
+Therefore
+\[
+f(x) = (x + 1 + 3i)(x + 1 - 3i)(h(x)) = (x^2 + 2x + 10)(h(x))
+\] for
+some polynomial $h(x)$.
+By division,
+\[h(x) = f(x) / (x^2 + 2x + 10) = x^4 + x^2 - 6
+\]
+Thus,
+\[f(x) = (x^2 + 2x + 10)(x^4 + x^2 - 6) = (x^2 + 2x + 10)(x^2 + 3)(x^2 - 2)
+\]
+We know that $(x^2 + 2x + 10)$ and $(x^2 - 2)$ are irreducible in $\mathbb{Q}[x]$
+by Eisenstein's Criterion for prime $p = 2$, and $(x^2 + 3)$ is irreducible
+in $\mathbb{Q}[x]$ for prime $p = 3$.  Therefore, the irreducible
+factorization of $f(x)$ in $\mathbb{Q}[x]$ is
+\[
+f(c) = (x^2 + 2x + 10)(x^2 + 3)(x^2 - 2)
+\]
 
+\item
+In $\mathbb{R}[x]$,
+\[f(x) = (x^2 + 2x + 10)(x^2 + 3)(x^2 - 2)
+= (x^2 + 2x + 10)(x^2 + 3)(x + \sqrt{2})(x - \sqrt{2})
+\]
+We know that $(x^2 + 2x + 10)$ and $(x^2 + 3)$ are irreducible $\mathbb{R}[x]$
+because a polynomial of the form $f(x) = ax^2 + bx + c$ is irreducible in
+$\mathbb{R}[x]$ if $b^2 - 4ac < 0$.  Therefore, the irreducible factorization
+of $f(x)$ in $\mathbb{R}[x]$ is
+\[
+(x^2 + 2x + 10)(x^2 + 3)(x + \sqrt{2})(x - \sqrt{2})
+\]
+
+\item
+In $\mathbb{C}[x]$, the irreducible factorization of $f(x)$ is
+\[
+f(x) = (x + 1 + 3i)(x + 1 - i)(x + \sqrt{3}i)(x - \sqrt{3}i)(x + \sqrt{2})(x - \sqrt{2})
+\]
+We know that each of these polynomials are irreducible in $\mathbb{C}[x]$ because
+they all have degree 1.
+
+\end{enumerate}
 \end{enumerate}
 \end{document}
