@@ -31,13 +31,13 @@ f(\alpha) - g(\alpha) = d(\alpha)
 \] \[
 f(\alpha)g(\alpha) = p(\alpha)
 \]
-We can prove that $\phi_{\alpha}$ is closed under addition as such:
+We can prove that $\phi_{\alpha}$ preserves addition as such:
 \[
 \phi_{\alpha}(f) + \phi_{\alpha}(g) = f(\alpha) + g(\alpha) = s(\alpha) = \phi_{\alpha}(s)
 \] \[
 \phi_{\alpha}(f) - \phi_{\alpha}(g) = f(\alpha) - g(\alpha) = d(\alpha) = \phi_{\alpha}(d)
 \]
-We can prove that $\phi_{\alpha}$ is closed under multiplication as such:
+We can prove that $\phi_{\alpha}$ preserves multiplication as such:
 \[
 \phi_{\alpha}(f)\phi_{\alpha}(g) = f(\alpha)g(\alpha) = p(\alpha) = \phi_{\alpha}(p)
 \]
@@ -45,16 +45,16 @@ Thus, $\phi_{\alpha}$ is a ring homomorphism.
 
 \item Let $f(\alpha)$, $g(\alpha)$ be elements in $S[\alpha]$.  This implies
 that $f(x)$ and $g(x)$ are elements of $S[x]$.  Since $S$ is a ring, its
-elements are closed under addition, implying that $S[x]$ is closed under
+elements are closed under addition, implying that $S[x]$ preserves
 addition as well.  Let $f(x) + g(x) = s(x)$ and $f(x) - g(x) = d(x)$.  Since
 $s(x)$ and $d(x)$ are in $S[x]$, $s(\alpha) = f(\alpha) + g(\alpha)$ and
 $d(\alpha) = f(\alpha) - g(\alpha)$ are elements of $S[\alpha]$ and $S[\alpha]$
-is closed under addition.
+preserves addition.
 \\
 \\
-Similarly, since $S$ is closed under multiplication, we can assume $p(x) = f(x)g(x)$
+Similarly, since $S$ preserves multiplication, we can assume $p(x) = f(x)g(x)$
 is an element of $S[x]$.  Therefore $p(\alpha) = f(\alpha)g(\alpha)$ is an
-element of $S[\alpha]$ and $S[alpha]$ is closed under multiplication.
+element of $S[\alpha]$ and $S[alpha]$ preserves multiplication.
 \\
 \\
 Thus, $S[\alpha]$ is a subring of $R$.
@@ -62,36 +62,30 @@ Thus, $S[\alpha]$ is a subring of $R$.
 
 
 
-\item Let $(a_0 + a_{1}x + ... + a_{n}x^n)$, $(b_0 + b_{1}x + ... + b_{n}x^n)$
+\item Let $a(x) = (a_0 + a_{1}x + ... + a_{n}x^n)$, $b(x) = (b_0 + b_{1}x + ... + b_{n}x^m)$
 be elements of $R_{1}[x]$.
-\\
-\\
-We can prove $G$ is closed under addition as such:
-\[
-G((a_0 + a_{1}x + ... + a_{n}x^{n}) + (b_0 + b_{1}x + ... + b_{n}x^{n}))
-\] \[
-= G(a_0 + a_{1}x + ... + a_{n}x^n + b_0 + b_{1}x + ... + b_{n}x^{n})
-\] \[
-= F(a_{0}) + F(a_{1})x + ... + F(a_{n})x^{n} + F(b_{0}) + F(b_{1})x + ... + F(b_{n})x^{n}
-\] \[
-= (F(a_{0}) + F(a_{1})x + ... + F(a_{n})x^{n}) + (F(b_{0}) + F(b_{1})x + ... + F(b_{n})x^{n})
-\] \[
-= G(a_0 + a_{1}x + ... + a_{n}x^{n}) + G(b_0 + b_{1}x + ... + b_{n}x^{n})
-\]
-We can prove $G$ is closed under multiplication as such:
-\[
-G((a_0 + a_{1}x + ... + a_{n}x^{n}) (b_0 + b_{1}x + ... + b_{n}x^{n}))
-\] \[
-= G (a_{0}b_{0} + ... + a_{n}b_{m}x^{n+m})
-\] \[
-= F(a_{0}b_{0}) + ... + F(a_{n}b_{m})x^{n+m}
-\] \[
-= F(a_{0})F(b_{0}) + ... + F(a_{n})F(b_{m})x^{n+m}
-\] \[
-= (F(a_{0}) + F(a_{1})x + ... + F(a_{n})x^{n})(F(b_{0}) + F(b_{1})x + ... + F(b_{m})x^{m})
-\] \[
-= G(a_0 + a_{1}x + ... + a_{n}x^{n}) G(b_0 + b_{1}x + ... + b_{n}x^{n})
-\]
+\\ \\
+Since $F$ is a ring homomorphism, we can prove $G$ preserves addition as such:
+
+\begin{align*}
+G(a(x) + b(x)) &= G((a_0 + a_{1}x + ... + a_{n}x^{n}) + (b_0 + b_{1}x + ... + b_{m}x^{m})) \\
+&= G(a_0 + a_{1}x + ... + a_{n}x^n + b_0 + b_{1}x + ... + b_{m}x^{m}) \\
+&= F(a_{0}) + F(a_{1})x + ... + F(a_{n})x^{n} + F(b_{0}) + F(b_{1})x + ... + F(b_{m})x^{m} \\
+&= (F(a_{0}) + F(a_{1})x + ... + F(a_{n})x^{n}) + (F(b_{0}) + F(b_{1})x + ... + F(b_{m})x^{m}) \\
+&= G(a_0 + a_{1}x + ... + a_{n}x^{n}) + G(b_0 + b_{1}x + ... + b_{m}x^{m}) \\
+&= G(a(x)) + G(b(x))
+\end{align*}
+
+We can prove $G$ preserves multiplication as such:
+\begin{align*}
+G((ab)(x)) &= G((a_0 + a_{1}x + ... + a_{n}x^{n})(b_0 + b_{1}x + ... + b_{m}x^{m})) \\
+&= G(a_{0}b_{0} + (a_{0}b_{1} + a_{1}b_{0})x + (a_{0}b_{2} + a_{1}b_{1} + a_{2}b_{0})x^2 + ... + a_{n}b_{m}x^{x+m}) \\
+&= F(a_{0}b_{0}) + F(a_{0}b_{1} + a_{1}b_{0})x + F(a_{0}b_{2} + a_{1}b_{1} + a_{2}b_{0})x^2 + ... + F(a_{n}b_{m})x^{x+m} \\
+&= (F(a_{0}) + F(a_{1})x + ... + F(a_{n})x^{n})(F(b_{0}) + F(b_{1})x + ... + F(b_{m})x^{m}) \\
+&= G(a_0 + a_{1}x + ... + a_{n}x^{n})G(b_0 + b_{1}x + ... + b_{m}x^{m}) \\
+&= G(a(x))G(b(x))
+\end{align*}
+
 Therefore $G$ is also a a ring homomorphism.
 
 \end{enumerate}
