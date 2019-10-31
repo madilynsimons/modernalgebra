@@ -16,12 +16,12 @@
 
 \begin{enumerate}
 
-\item If $f(x) = x^7 - 7(x+1) + 20$, then
+\item If $f(x) = x^7 - 7x + 20$, then
 \[
 f(x+1) = x^7 + 7x^6 + 21x^5 + 35x^4 + 35x^3 + 21x^2 + 14
 \]
-By Eisenstein's Criterion, $f(x + 1)$ is irreducible in $\mathbb{Q}[x]$, and so
-$f(x)$ is irreducible in $\mathbb{Q}[x]$.
+By Eisenstein's Criterion, $f(x + 1)$ is irreducible in $\mathbb{Q}[x]$ for $p = 7$,
+and so $f(x)$ is irreducible in $\mathbb{Q}[x]$.
 
 \item Let $f(x) = x^5 - 4x^4 + 4d^3 + 3x^2 -26x + 21$.
 If $p = 2$, then $\overline{f}(x) = x^5 + x^2 + 1$ in $\mathbb{Z}_{p}[x]$.
@@ -32,12 +32,13 @@ irreducible in $\mathbb{Q}[x]$.
 \item
 \begin{enumerate}
 \item
-Since $-1 + 3i$ is a root of $f(x)$, $-1 - 3i$ is a root of $f(x)$.
+Since $-1 + 3i$ is a root of $f(x)$, $-1 - 3i$ is also a root of $f(x)$.
 Therefore
 \[
 f(x) = (x + 1 + 3i)(x + 1 - 3i)(h(x)) = (x^2 + 2x + 10)(h(x))
 \] for
 some polynomial $h(x)$.
+\\ \\
 By division,
 \[h(x) = f(x) / (x^2 + 2x + 10) = x^4 + x^2 - 6
 \]
@@ -46,7 +47,8 @@ Thus,
 \]
 We know that $(x^2 + 2x + 10)$ and $(x^2 - 2)$ are irreducible in $\mathbb{Q}[x]$
 by Eisenstein's Criterion for prime $p = 2$, and $(x^2 + 3)$ is irreducible
-in $\mathbb{Q}[x]$ for prime $p = 3$.  Therefore, the irreducible
+in $\mathbb{Q}[x]$ by Eisenstein's Criterion for prime $p = 3$.
+Therefore, the irreducible
 factorization of $f(x)$ in $\mathbb{Q}[x]$ is
 \[
 f(c) = (x^2 + 2x + 10)(x^2 + 3)(x^2 - 2)
