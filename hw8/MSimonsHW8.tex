@@ -51,5 +51,17 @@ $K$ is a field.
 
 \end{enumerate}
 
+\item To prove that $(a,b) = (d)$, first let us prove that $(a,b) \subseteq (d)$.
+Let $ar_1 + br_2$ be any element of $(a,b)$.  Since $d$ is the greatest common
+divisor of $a$ and $b$, $a = dx$ and $b = dy$ for some integers $x$ and $y$.
+Therefore, $ar_1 + br_2 = dxr_1 + dyr_2 = d(xr_{1} + dyr_{2})$, which is an
+element of $(d)$.  Thus, $(a,b) \subseteq (d)$. \\ \\
+Next, let us prove $(d) \subseteq (a,b)$.  Since $d$ is the greatest common
+divisor of $a$ and $b$, $d = au + bv$ for some integers $u$ and $v$.  Let
+$rd$ be any element of $(d)$.
+Therefore, $rd = r(au + bv) = rau + rbv = a(ru) + b(rv) \subseteq (a,b)$.
+Thus $(d) \subseteq (a,b)$. \\ \\
+Since $(d) \subseteq (a,b)$ and $(a,b) \subseteq (d)$, $(a,b) = (d)$.
+
 \end{enumerate}
 \end{document}
