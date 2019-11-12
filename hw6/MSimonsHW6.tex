@@ -16,34 +16,26 @@
 
 \begin{enumerate}
 
-\item To prove that "is an associate of" is an equivalence relation on $R$, we
+\item To prove that ``is an associate of'' is an equivalence relation on $R$, we
 must show that it is reflexive, symmetric, and transitive.
 \\
 \\
 First, since $R$ is a commutative ring, there exists some identity element in
 $R$, $1_R$, such that $a1_R = a$.  We can say that $1_R$ is a unit since
 $(1_{R})  (1_{R}) = 1_{R}$.  Since $a1_R = a$, $a$ is an associate of $a$
-and "is an associate of" is reflexive.
+and ``is an associate of'' is reflexive.
 \\
 \\
 Next, let $a$, $b \in R$ such that $a$ is an associate of $b$.  Therefore,
-there exist some unit, $u$, in $R$ such that $au = b$.  Since $u$ is a unit,
+there exist some unit, $u$, in $R$ such that $a = bu$.  Since $u$ is a unit,
 there also exists some unit $v \in R$ such that $uv = 1_R$.
 \\
 \\
 If $a = bu$, then
 \[
-av = (bu)v
-\] \[
-av = buv
-\] \[
-av = b(uv)
-\] \[
-av = b1_{R}
-\] \[
-av = b
+av = buv = b1_{R} = b
 \]
-Therefore, $b$ is an associate of $a$ and "is an associate of" is reflexive.
+Therefore, $b$ is an associate of $a$ and ``is an associate of'' is reflexive.
 \\
 \\
 Finally, let $a$ be an associate of $b$ and let $b$ be an associate of $c$ for
@@ -53,17 +45,13 @@ units $u$, $v \in R$.
 \\
 We notice that
 \[
-a = bu
-\] \[
-a = (cv)u
-\] \[
-a = c(vu)
+a = bu = cvu
 \]
 We know that $vu$ is a unit because there exists some
 $v^{-1}$, $u^{-1} \in R$ such that $vv^{-1} = 1_R$ and $uu^{-1} = 1_R$ since
 $v$ and $u$ are units.  Thus, $(vu)(v^{-1}u^{-1}) = (vv^{-1})(uu^{-1}) = 1_R$
 and so $vu$ is a unit.  Since $vu$ is a unit, $a$ is an associate of $c$ and
-"is an associate of" is transitive.
+``is an associate of'' is transitive.
 
 \item
 \begin{enumerate}
