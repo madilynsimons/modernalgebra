@@ -20,14 +20,16 @@
 \[
 f(x+1) = x^7 + 7x^6 + 21x^5 + 35x^4 + 35x^3 + 21x^2 + 14
 \]
-By Eisenstein's Criterion, $f(x + 1)$ is irreducible in $\mathbb{Q}[x]$ for $p = 7$,
+By Eisenstein's Criterion, for $p = 7$, $f(x + 1)$ is irreducible in $\mathbb{Q}[x]$,
 and so $f(x)$ is irreducible in $\mathbb{Q}[x]$.
 
-\item Let $f(x) = x^5 - 4x^4 + 4d^3 + 3x^2 -26x + 21$.
+\item Let $f(x) = x^5 - 4x^4 + 4x^3 + 3x^2 -26x + 21$.
 If $p = 2$, then $\overline{f}(x) = x^5 + x^2 + 1$ in $\mathbb{Z}_{p}[x]$.
-Since $\overline{f}(0) = \overline{f}(1) = 1$, $\overline{f}(x)$ is
-irreducible in $\mathbb{Z}_{p}[x]$.  Therefore, $f(x)$ is
-irreducible in $\mathbb{Q}[x]$.
+We know that $\overline{f}(x)$ is irreducible in $\mathbb{Z}_{p}[x]$ because
+since it has no roots, it is either irreducible or the product of an irreducible
+quadratic and an irreducible cubic.  However, the only irreducible quadratic
+in $\mathbb{Z}_{p}[x]$ is $x^2 + x + 1$, which does not divide $\overline{f}(x)$.
+Therefore, $f(x)$ is irreducible in $\mathbb{Q}[x]$.
 
 \item
 \begin{enumerate}
@@ -40,7 +42,7 @@ f(x) = (x + 1 + 3i)(x + 1 - 3i)(h(x)) = (x^2 + 2x + 10)(h(x))
 some polynomial $h(x)$.
 \\ \\
 By division,
-\[h(x) = f(x) / (x^2 + 2x + 10) = x^4 + x^2 - 6
+\[h(x) = f(x) / (x^2 + 2x + 10) = x^4 + x^2 - 6.
 \]
 Thus,
 \[f(x) = (x^2 + 2x + 10)(x^4 + x^2 - 6) = (x^2 + 2x + 10)(x^2 + 3)(x^2 - 2)
@@ -51,7 +53,7 @@ in $\mathbb{Q}[x]$ by Eisenstein's Criterion for prime $p = 3$.
 Therefore, the irreducible
 factorization of $f(x)$ in $\mathbb{Q}[x]$ is
 \[
-f(c) = (x^2 + 2x + 10)(x^2 + 3)(x^2 - 2)
+f(c) = (x^2 + 2x + 10)(x^2 + 3)(x^2 - 2).
 \]
 
 \item
@@ -64,13 +66,13 @@ because a polynomial of the form $f(x) = ax^2 + bx + c$ is irreducible in
 $\mathbb{R}[x]$ if $b^2 - 4ac < 0$.  Therefore, the irreducible factorization
 of $f(x)$ in $\mathbb{R}[x]$ is
 \[
-(x^2 + 2x + 10)(x^2 + 3)(x + \sqrt{2})(x - \sqrt{2})
+(x^2 + 2x + 10)(x^2 + 3)(x + \sqrt{2})(x - \sqrt{2}).
 \]
 
 \item
 In $\mathbb{C}[x]$, the irreducible factorization of $f(x)$ is
 \[
-f(x) = (x + 1 + 3i)(x + 1 - i)(x + \sqrt{3}i)(x - \sqrt{3}i)(x + \sqrt{2})(x - \sqrt{2})
+f(x) = (x + 1 + 3i)(x + 1 - 3i)(x + \sqrt{3}i)(x - \sqrt{3}i)(x + \sqrt{2})(x - \sqrt{2}).
 \]
 We know that each of these polynomials are irreducible in $\mathbb{C}[x]$ because
 they all have degree 1.
