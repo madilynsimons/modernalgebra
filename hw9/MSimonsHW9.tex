@@ -32,6 +32,28 @@ $f$ is the zero function.
 
 \end{enumerate}
 
+\item TODO Rewrite this and replace $(q_{1}(x))$ with $(q_{i}(x))$
+
+First, assume $(p(x))$ is maximal.  Let
+$p(x) = q_{1}(x)q_{2}(x) ... q_{n}(x)$ be the prime factorization of $p(x)$.
+Therefore $(p(x)) \subset (q_{1}(x))$ since $q_{1}(x)$ divides $p(x)$.
+Since $(p(x))$ is maximal, either $(p(x)) = (q_{1}(x))$ or $F[x] = (q_{1}(x))$.
+\\ \\
+Assume $(p(x)) = (q_{1}(x))$.  Therefore $p(x)$ must be some divisor of
+$q_{1}(x)$ such that $q_{1}(x) = p(x)q_{2}^{-1}(x) ... q_{n}^{-1}(x)$.  This
+implies that $q_{2}(x), q_{3}(x), ..., q_{n}(x)$ are units, which are nonzero
+constants.  If $p(x)$ is the product of an irreducible polynomial $q_{1}(x)$
+and several nonzero constant polynomials, then $p(x)$ is irreducible.
+\\ \\
+Now assume $F[x] = (q_{1}(x))$.  If this is the case, then $q_{1}(x)$ must
+be a unit, which is a contradiction.
+\\ \\
+Therefore if $(p(x))$ is maximal, then $p(x)$ is irreducible.  Then the quotient
+ring $F[x]/(p(x))$ is all
+\\ \\
+Next, assume $p(x)$ is irreducible.  TODO
+
+
 
 \end{enumerate}
 \end{document}
