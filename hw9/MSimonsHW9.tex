@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{amsmath,amssymb}
 \newcommand{\Z}{\mathbb{Z}}
-\title{Homework 8}
+\title{Homework 9}
 \author{Madilyn Simons}
 \date{}
 \setlength{\parindent}{0pt}
@@ -48,10 +48,8 @@ and several nonzero constant polynomials, then $p(x)$ is irreducible.
 Now assume $F[x] = (q_{1}(x))$.  If this is the case, then $q_{1}(x)$ must
 be a unit, which is a contradiction.
 \\ \\
-Therefore if $(p(x))$ is maximal, then $p(x)$ is irreducible.  Then the quotient
-ring $F[x]/(p(x))$ is all
-\\ \\
-Next, assume $p(x)$ is irreducible.  TODO
+Next, assume $p(x)$ is irreducible.  Since $p(x)$ is irreducible, the quotient
+ring $F[x]/(p(x))$ is a field and therefore $(p(x))$ is a maximal ideal.
 
 \item
 \begin{enumerate}
@@ -67,5 +65,46 @@ all $a(x) \in I$.
 
 \end{enumerate}
 
+\item
+\begin{enumerate}
+\item
+Let $I = \{f(x) \in F[x] | f(\alpha) = 0\}$.  We know that $I$ is an ideal of
+$F[x]$ because for all $f_{1}(x)$, $f_{2}(x) \in I$,
+\[
+f_{1}(\alpha) - f_{2}(\alpha) = 0-0 = 0
+\]
+So $f_{1}(x) - f_{2}(x) \in I$.  For all $g(x) \in F[x]$ and $f(x) \in I$,
+\[
+f(\alpha)g(\alpha) = 0*g(\alpha) = 0
+\] \[
+g(\alpha)f(\alpha) = g(\alpha)*0 = 0
+\]
+So $f(x)g(x) \in I$ and $g(x)f(x) \in I$, and $I$ is a proper ideal of $F[x]$.
+\\ \\
+Since $\alpha$ is a root of $p(x)$, $p(\alpha) = 0$ and $p(\alpha) \in I$.
+Because all ideals of $F[x]$ are principal ideals and $p(x)$ is irreducible,
+$I = (p(x))$ and all elements of $I$ are divisible by $p(x)$.  If $g(\alpha) = 0$,
+then $g(x) \in I$ and $p(x) | g(x)$.
+\\
+\\
+Next, assume $p(x) | g(x)$.  Then $g(x) = p(x)q(x)$ for some $q(x)$, and so
+\[
+g(\alpha) = p(\alpha)q(\alpha) = 0.
+\]
+Thus, $g(\alpha) = 0$ if and only if $p(x) | g(x)$.
+
+\item Let $I = \{f(x) \in \mathbb{Q} | f(\sqrt[7]{2}) = 0\}$.
+Let $p(x) = x^2 - 2$.  By Eisenstein's Criterion, $x^7 - 2$ is irreducible, and
+$p(\sqrt[7]{2}) = 0$ so $p(x) \in I$.  By problem $4a$, any nonzero
+$g(x) \in I$ must be divisible by $p(x)$, meaning that $deg$ $g \geq 7$.
+
+\item Let $g:F[x] \rightarrow F[\alpha]$ be a homomorphism of rings
+given by $g(f(x)) = f(\alpha)$ such that $f(x) \in F[x]$.  Then the kernel of
+$g$ is $(p(x))$.  We know that $g$ is surjective, because all $f(\alpha)$ map to
+some $f(x)$ so that there is an $f(x)$ for all $f(\alpha)$ such that
+$g(f(x)) = f(\alpha)$.  Thus, by Theorem 6.13, $F[x]/(p(x))$ is isomorphic
+to $F[\alpha]$.
+
+\end{enumerate}
 \end{enumerate}
 \end{document}
