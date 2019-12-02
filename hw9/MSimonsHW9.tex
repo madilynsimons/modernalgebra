@@ -10,6 +10,8 @@
 
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiterX\setc[2]{\{}{\}}{\,#1 \;\delimsize\vert\; #2\,}
 
 \begin{document}
 \maketitle
@@ -32,21 +34,26 @@ $f$ is the zero function.
 
 \end{enumerate}
 
-\item TODO Rewrite this and replace $(q_{1}(x))$ with $(q_{i}(x))$
-
+\item
 First, assume $(p(x))$ is maximal.  Let
 $p(x) = q_{1}(x)q_{2}(x) ... q_{n}(x)$ be the prime factorization of $p(x)$.
-Therefore $(p(x)) \subset (q_{1}(x))$ since $q_{1}(x)$ divides $p(x)$.
-Since $(p(x))$ is maximal, either $(p(x)) = (q_{1}(x))$ or $F[x] = (q_{1}(x))$.
+Because $q_{i}(x)$ divides $p(x)$ for some nonconstant $q_{i}(x)$ ($1 \leq i \leq n$),
+ $(p(x)) \subset (q_{i}(x))$.
+Since $(p(x))$ is maximal, either $(p(x)) = (q_{i}(x))$ or $F[x] = (q_{i}(x))$.
 \\ \\
-Assume $(p(x)) = (q_{1}(x))$.  Therefore $p(x)$ must be some divisor of
-$q_{1}(x)$ such that $q_{1}(x) = p(x)q_{2}^{-1}(x) ... q_{n}^{-1}(x)$.  This
-implies that $q_{2}(x), q_{3}(x), ..., q_{n}(x)$ are units, which are nonzero
-constants.  If $p(x)$ is the product of an irreducible polynomial $q_{1}(x)$
+If $F[x] = (q_{i}(x))$, then $q_{i}(x)$ must
+be a unit, which is a contradiction.  Thus, $(p(x)) = (q_{i}(x))$.
+Therefore $p(x)$ must be some divisor of
+$q_{i}(x)$ such that
+\[
+q_{i}(x) = p(x)q_{1}^{-1}(x)q_{2}^{-1}(x) ... q_{i-1}^{-1}(x)q_{i+1}^{-1}(x) ... q_{n}^{-1}(x).
+\]
+\\
+This
+implies that $q_{1}(x)$, $q_{2}(x)$, ... $q_{i-1}(x)$, $q_{i+1}(x)$ ... $q_{n}^(x)$
+are units, which are nonzero constants.  If $p(x)$ is the product of an
+irreducible polynomial $q_{i}(x)$
 and several nonzero constant polynomials, then $p(x)$ is irreducible.
-\\ \\
-Now assume $F[x] = (q_{1}(x))$.  If this is the case, then $q_{1}(x)$ must
-be a unit, which is a contradiction.
 \\ \\
 Next, assume $p(x)$ is irreducible.  Since $p(x)$ is irreducible, the quotient
 ring $F[x]/(p(x))$ is a field and therefore $(p(x))$ is a maximal ideal.
@@ -54,13 +61,19 @@ ring $F[x]/(p(x))$ is a field and therefore $(p(x))$ is a maximal ideal.
 \item
 \begin{enumerate}
 \item
-By the Division Algorithm, $a(x) = b(x)q(x) + r(x)$ such that
-$0 \leq deg r(x) < deg b(x)$.  By Theorem 6.1, $b(x)q(x) \in I$ and
+By the Division Algorithm,
+\[
+a(x) = b(x)q(x) + r(x)
+\] \[
+0 \leq \deg{r(x)} < \deg{b(x)}.
+\]
+\\
+By Theorem 6.1, $b(x)q(x) \in I$ and
 $a(x) - b(x)q(x) = r(x) \in I$.
 
 \item Let $a(x)$ by any nonzero polynomial in $I$.  By the Division Algorithm,
-$a(x) = p(x)q(x) + r(x)$ such that $0 \leq deg r(x) < deg p(x)$.  However,
-$p(x)$ is of minimal degree, so $deg r(x) = 0$.  Therefore, $p(x)$ divides
+$a(x) = p(x)q(x) + r(x)$ such that $0 \leq \deg{r(x)} < \deg{p(x)}$.  However,
+$p(x)$ is of minimal degree, so $\deg{r(x)} = 0$.  Therefore, $p(x)$ divides
 all $a(x) \in I$.
 
 \end{enumerate}
@@ -68,12 +81,12 @@ all $a(x) \in I$.
 \item
 \begin{enumerate}
 \item
-Let $I = \{f(x) \in F[x] | f(\alpha) = 0\}$.  We know that $I$ is an ideal of
+Let $I = \setc*{ f(x) \in F[x]}{f(\alpha) = 0 }$.  We know that $I$ is an ideal of
 $F[x]$ because for all $f_{1}(x)$, $f_{2}(x) \in I$,
 \[
 f_{1}(\alpha) - f_{2}(\alpha) = 0-0 = 0
 \]
-So $f_{1}(x) - f_{2}(x) \in I$.  For all $g(x) \in F[x]$ and $f(x) \in I$,
+So $f_{1}(x) - f_{2}(x) \in I$.  And, for all $g(x) \in F[x]$ and $f(x) \in I$,
 \[
 f(\alpha)g(\alpha) = 0*g(\alpha) = 0
 \] \[
@@ -93,10 +106,10 @@ g(\alpha) = p(\alpha)q(\alpha) = 0.
 \]
 Thus, $g(\alpha) = 0$ if and only if $p(x) | g(x)$.
 
-\item Let $I = \{f(x) \in \mathbb{Q} | f(\sqrt[7]{2}) = 0\}$.
+\item Let $I = \setc*{f(x) \in \mathbb{Q}}{f(\sqrt[7]{2}) = 0}$.
 Let $p(x) = x^2 - 2$.  By Eisenstein's Criterion, $x^7 - 2$ is irreducible, and
 $p(\sqrt[7]{2}) = 0$ so $p(x) \in I$.  By problem $4a$, any nonzero
-$g(x) \in I$ must be divisible by $p(x)$, meaning that $deg$ $g \geq 7$.
+$g(x) \in I$ must be divisible by $p(x)$, meaning that $\deg{g} \geq 7$.
 
 \item Let $g:F[x] \rightarrow F[\alpha]$ be a homomorphism of rings
 given by $g(f(x)) = f(\alpha)$ such that $f(x) \in F[x]$.  Then the kernel of
