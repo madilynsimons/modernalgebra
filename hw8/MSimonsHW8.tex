@@ -47,6 +47,22 @@ Let $f(x) = x^3 + 2x + 1$.  We know that $f(x)$ is irreducible over
 $\mathbb{Z}/3\mathbb{Z}$ because $f(0) = f(1) = f(2) = 1$ and $\deg f(x) = 3$.
 Therefore,
 $K$ is a field.
+\item
+We know that $f(t)$ does not have any roots in $K$ because $a \in \mathbb{Z}/3\mathbb{Z}$
+is a root of $f(t)$ if and only if $t-a$ is a factor of $f(t)$.  By definition of
+$\mathbb{Z}/3\mathbb{Z}$, $a$ can only be 0, 1, or 2.  However, by the Division
+Algorithm,
+\[
+t^3 + 2t + 1 = t(t^2 + 2) + 1,
+\]
+\[
+t^3 + 2t + 1 = (t+1)(t^2 - t) + 1,
+\]
+and
+\[
+t^3 + 2t + 1 = (t+2)(t^2 - 2t) + 1.
+\]
+Therefore, $f(t)$ has no roots.
 
 \end{enumerate}
 
